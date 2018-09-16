@@ -25,18 +25,29 @@ class Sudoku:
 
     def move(self, direction):
         if direction == "UP":
-            if self.posX < 8:
-                self.posX += 1
+            if self.posX > 0:
+                self.posX -= 1
         elif direction == "RIGHT":
             if self.posY < 8:
                 self.posY += 1
         elif direction == "DOWN":
-            if self.posX > 0:
-                self.posX -= 1
+            if self.posX < 8:
+                self.posX += 1
         elif direction == "LEFT":
             if self.posY > 0:
                 self.posY -= 1
 
     def print(self):
-        print(self.posX, self.posY, "Current value:",
-              self.puzzle[self.posX][self.posY])
+        output = "-------------------------------------\n"
+
+        for i in range(len(self.puzzle)):
+            for j in range(len(self.puzzle[i])):
+                if i == self.posX and j == self.posY:
+                    output += (f"|={self.puzzle[self.posX][self.posY]}=")
+                else:
+                    output += (f"| {self.puzzle[self.posX][self.posY]} ")
+
+            output += "|\n"
+            output += "-------------------------------------\n"
+
+        print(output)
