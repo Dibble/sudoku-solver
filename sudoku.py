@@ -43,9 +43,9 @@ class Sudoku:
         for i in range(len(self.puzzle)):
             for j in range(len(self.puzzle[i])):
                 if i == self.posX and j == self.posY:
-                    output += (f"|={self.puzzle[self.posX][self.posY]}=")
+                    output += (f"|={self.puzzle[i][j]}=")
                 else:
-                    output += (f"| {self.puzzle[self.posX][self.posY]} ")
+                    output += (f"| {self.puzzle[i][j]} ")
 
             output += "|\n"
             output += "-------------------------------------\n"
