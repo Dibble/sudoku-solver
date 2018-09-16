@@ -13,15 +13,17 @@ def newPuzzle():
 
 
 class Sudoku:
-    puzzle = newPuzzle()
-    posX = 0
-    posY = 0
+    def __init__(self):
+      self.puzzle = newPuzzle()
+      self.posX = 0
+      self.posY = 0
 
     def setValue(self, value):
         if value < 0 or value > 9:
             return False
 
         self.puzzle[self.posX][self.posY]['value'] = value
+        return value
 
     def move(self, direction):
         if direction == "UP":
