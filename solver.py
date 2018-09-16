@@ -13,11 +13,11 @@ class Solver:
         while isSolved != True and i < 1000:
             self.updateOptions()
             print(f"iteration {i}")
-            i += 1
 
+            i += 1
             isSolved = self.isSolved()
 
-        return isSolved
+        return isSolved, i - 1
 
     def isSolved(self):
         for i in range(9):

@@ -53,26 +53,22 @@ class Sudoku:
             if self.posY > 0:
                 self.posY -= 1
 
-    def print(self):
-        output = "====================================================================\n"
+    def print(self, printOptions):
+        output = "====================================================================\n" if printOptions else "=========================================\n"
 
         for i in range(len(self.puzzle)):
             for j in range(len(self.puzzle[i])):
-                if j % 3 == 0:
-                    output += "||"
-                else:
-                    output += "|"
-
-                if i == self.posX and j == self.posY:
-                    output += (f"={self.puzzle[i][j]['value']}({len(self.puzzle[i][j]['options'])})=")
-                else:
-                    output += (f" {self.puzzle[i][j]['value']}({len(self.puzzle[i][j]['options'])}) ")
+                output += "||" if j % 3 == 0 else "|"
+                output += "=" if i == self.posX and j == self.posY else " "
+                output += f"{self.puzzle[i][j]['value']}"
+                output += f"({len(self.puzzle[i][j]['options'])})" if printOptions else ""
+                output += "=" if i == self.posX and j == self.posY else " "
 
             output += "||\n"
 
             if i % 3 == 2:
-                output += "====================================================================\n"
+                output += "====================================================================\n" if printOptions else "=========================================\n"
             else:
-                output += "--------------------------------------------------------------------\n"
+                output += "--------------------------------------------------------------------\n" if printOptions else "-----------------------------------------\n"
 
         print(output)

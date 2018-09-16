@@ -9,9 +9,9 @@ def start():
 
     print("Setup done, solving...")
     puzzleSolver = Solver(puzzle.puzzle)
-    solved = puzzleSolver.solve()
-    puzzle.print()
-    print("Solved:", solved)
+    solved, iterations = puzzleSolver.solve()
+    puzzle.print(False)
+    print("Solved:", solved, iterations, "iterations")
 
 
 if __name__ == "__main__":

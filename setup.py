@@ -3,7 +3,7 @@ import readchar
 
 def runSetup(puzzle):
     while True:
-        puzzle.print()
+        puzzle.print(False)
         print("Enter the known values for the puzzle. Use arrow keys to move, type number 0-9 to set. Press Q when finished.")
 
         key = readchar.readkey()
