@@ -11,10 +11,24 @@ def newPuzzle():
         [{"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}]
     ]
 
+def easyPuzzle():
+  return [
+        [{"value": 2, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 8, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 6, "options": [1,2,3,4,5,6,7,8,9]}],
+        [{"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 5, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 3, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 4, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}],
+        [{"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 1, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 4, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 6, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 2, "options": [1,2,3,4,5,6,7,8,9]}],
+        [{"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 3, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 1, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 5, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 9, "options": [1,2,3,4,5,6,7,8,9]}],
+        [{"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 3, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 8, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}],
+        [{"value": 4, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 2, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 9, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 8, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}],
+        [{"value": 1, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 7, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 9, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 6, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}],
+        [{"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 4, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 6, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 3, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}],
+        [{"value": 3, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 4, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 5, "options": [1,2,3,4,5,6,7,8,9]}]
+    ]
+
 
 class Sudoku:
     def __init__(self):
-      self.puzzle = newPuzzle()
+      # self.puzzle = newPuzzle()
+      self.puzzle = easyPuzzle()
       self.posX = 0
       self.posY = 0
 
@@ -40,7 +54,7 @@ class Sudoku:
                 self.posY -= 1
 
     def print(self):
-        output = "=========================================\n"
+        output = "====================================================================\n"
 
         for i in range(len(self.puzzle)):
             for j in range(len(self.puzzle[i])):
@@ -50,15 +64,15 @@ class Sudoku:
                     output += "|"
 
                 if i == self.posX and j == self.posY:
-                    output += (f"={self.puzzle[i][j]['value']}=")
+                    output += (f"={self.puzzle[i][j]['value']}({len(self.puzzle[i][j]['options'])})=")
                 else:
-                    output += (f" {self.puzzle[i][j]['value']} ")
+                    output += (f" {self.puzzle[i][j]['value']}({len(self.puzzle[i][j]['options'])}) ")
 
             output += "||\n"
 
             if i % 3 == 2:
-                output += "=========================================\n"
+                output += "====================================================================\n"
             else:
-                output += "-----------------------------------------\n"
+                output += "--------------------------------------------------------------------\n"
 
         print(output)

@@ -1,3 +1,6 @@
+import math
+
+
 class Solver:
 
     def __init__(self, puzzle):
@@ -7,7 +10,7 @@ class Solver:
         i = 1
         isSolved = False
 
-        while isSolved != True and i < 100:
+        while isSolved != True and i < 1000:
             self.updateOptions()
             print(f"iteration {i}")
             i += 1
@@ -32,12 +35,18 @@ class Solver:
 
                 rowValues = self.__getRowValues__(j)
                 columnValues = self.__getColumnValues__(i)
+                squareValues = self.__getSquareValues__(i, j)
 
-                self.__removeOptions__(
-                    i, j, rowValues + list(set(columnValues) - set(rowValues)))
+                rowAndColumnValues = rowValues + \
+                    list(set(columnValues) - set(rowValues))
+                allValues = rowAndColumnValues + \
+                    list(set(squareValues) - set(rowAndColumnValues))
+
+                self.__removeOptions__(i, j, allValues)
 
                 if len(self.puzzle[i][j]['options']) == 1:
                     self.puzzle[i][j]['value'] = self.puzzle[i][j]['options'][0]
+                    print(f"Solved [{i}][{j}]: {self.puzzle[i][j]['value']}")
 
     def __getRowValues__(self, row):
         rowValues = []
@@ -59,3 +68,18 @@ class Solver:
                 self.puzzle[col][row]['options'].remove(val)
             except ValueError:
                 continue
+
+    def __getSquareValues__(self, col, row):
+        squareValues = []
+        squareX = math.floor(col / 3)
+        squareY = math.floor(row / 3)
+
+        for i in range(3):
+            for j in range(3):
+                x = squareX * 3 + i
+                y = squareY * 3 + j
+
+                if self.puzzle[x][y]['value'] != 0:
+                    squareValues.append(self.puzzle[x][y]['value'])
+
+        return squareValues
