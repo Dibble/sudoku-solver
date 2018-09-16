@@ -38,16 +38,25 @@ class Sudoku:
                 self.posY -= 1
 
     def print(self):
-        output = "-------------------------------------\n"
+        output = "=========================================\n"
 
         for i in range(len(self.puzzle)):
             for j in range(len(self.puzzle[i])):
-                if i == self.posX and j == self.posY:
-                    output += (f"|={self.puzzle[i][j]}=")
+                if j % 3 == 0:
+                    output += "||"
                 else:
-                    output += (f"| {self.puzzle[i][j]} ")
+                    output += "|"
 
-            output += "|\n"
-            output += "-------------------------------------\n"
+                if i == self.posX and j == self.posY:
+                    output += (f"={self.puzzle[i][j]}=")
+                else:
+                    output += (f" {self.puzzle[i][j]} ")
+
+            output += "||\n"
+
+            if i % 3 == 2:
+                output += "=========================================\n"
+            else:
+                output += "-----------------------------------------\n"
 
         print(output)
