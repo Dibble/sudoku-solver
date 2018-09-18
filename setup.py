@@ -1,8 +1,11 @@
 import readchar
+from os import system
 
 
 def runSetup(puzzle):
     while True:
+        system('clear')
+
         puzzle.print(False)
         print("Enter the known values for the puzzle. Use arrow keys to move, type number 0-9 to set. Press Q when finished.")
 
