@@ -22,7 +22,7 @@ class Solver:
     def isSolved(self):
         for i in range(9):
             for j in range(9):
-                if self.puzzle[i][j]['value'] == 0:
+                if self.puzzle[i][j]['value'] == None:
                     return False
 
         return True
@@ -30,7 +30,7 @@ class Solver:
     def updateOptions(self):
         for i in range(9):
             for j in range(9):
-                if self.puzzle[i][j]['value'] != 0:
+                if self.puzzle[i][j]['value'] != None:
                     continue
 
                 rowValues = self.__getRowValues__(j)
@@ -51,14 +51,14 @@ class Solver:
     def __getRowValues__(self, row):
         rowValues = []
         for col in range(9):
-            if self.puzzle[col][row]['value'] != 0:
+            if self.puzzle[col][row]['value'] != None:
                 rowValues.append(self.puzzle[col][row]['value'])
         return rowValues
 
     def __getColumnValues__(self, col):
         columnValues = []
         for row in range(9):
-            if self.puzzle[col][row]['value'] != 0:
+            if self.puzzle[col][row]['value'] != None:
                 columnValues.append(self.puzzle[col][row]['value'])
         return columnValues
 
@@ -79,7 +79,7 @@ class Solver:
                 x = squareX * 3 + i
                 y = squareY * 3 + j
 
-                if self.puzzle[x][y]['value'] != 0:
+                if self.puzzle[x][y]['value'] != None:
                     squareValues.append(self.puzzle[x][y]['value'])
 
         return squareValues

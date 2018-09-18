@@ -1,15 +1,12 @@
 def newPuzzle():
-    return [
-        [{"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}],
-        [{"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}],
-        [{"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}],
-        [{"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}],
-        [{"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}],
-        [{"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}],
-        [{"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}],
-        [{"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}],
-        [{"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}, {"value": 0, "options": [1,2,3,4,5,6,7,8,9]}]
-    ]
+  puzzle = []
+
+  for i in range(9):
+    puzzle.append([])
+    for j in range(9):
+      puzzle[i].append({"value": None, "options": [1,2,3,4,5,6,7,8,9]})
+  
+  return puzzle
 
 def easyPuzzle():
   return [
@@ -60,7 +57,7 @@ class Sudoku:
             for j in range(len(self.puzzle[i])):
                 output += "||" if j % 3 == 0 else "|"
                 output += "=" if i == self.posX and j == self.posY else " "
-                output += f"{self.puzzle[i][j]['value']}"
+                output += f"{self.puzzle[i][j]['value']}" if self.puzzle[i][j]['value'] != None else " "
                 output += f"({len(self.puzzle[i][j]['options'])})" if printOptions else ""
                 output += "=" if i == self.posX and j == self.posY else " "
 
