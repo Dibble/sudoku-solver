@@ -95,7 +95,23 @@ class Solver:
             if emptyCells == 1:
                 self.puzzle[emptyColumn][row]['value'] = 45 - rowSum
                 print(
-                    f"Fill Singles solved [{emptyColumn}][{row}]: {self.puzzle[emptyColumn][row]['value']}")
+                    f"Fill Single Row solved [{emptyColumn}][{row}]: {self.puzzle[emptyColumn][row]['value']}")
+
+        for col in range(9):
+            columnSum = 0
+            emptyCells = 0
+            emptyRow = None
+            for row in range(9):
+                if self.puzzle[col][row]['value'] != None:
+                    columnSum += self.puzzle[col][row]['value']
+                else:
+                    emptyCells += 1
+                    emptyRow = row
+
+            if emptyCells == 1:
+                self.puzzle[col][emptyRow]['value'] = 45 - columnSum
+                print(
+                    f"Fill Single Col solved [{col}][{emptyRow}]: {self.puzzle[col][emptyRow]['value']}")
 
     def __getRowValues__(self, row):
         rowValues = []
