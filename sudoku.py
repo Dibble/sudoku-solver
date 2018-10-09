@@ -40,46 +40,30 @@ class Sudoku:
       # self.puzzle = newPuzzle()
       # self.puzzle = easyPuzzle()
       self.puzzle = mediumPuzzle()
-      self.selectedColumn = 0
-      self.selectedRow = 0
 
-    def setValue(self, value):
+    def setValue(self, column, row, value):
         if value < 0 or value > 9:
             return False
 
-        self.puzzle[self.selectedColumn][self.selectedRow]['value'] = value
+        self.puzzle[column][row]['value'] = value
         return value
 
-    def move(self, direction):
-        if direction == "UP":
-            if self.selectedRow > 0:
-                self.selectedRow -= 1
-        elif direction == "RIGHT":
-            if self.selectedColumn < 8:
-                self.selectedColumn += 1
-        elif direction == "DOWN":
-            if self.selectedRow < 8:
-                self.selectedRow += 1
-        elif direction == "LEFT":
-            if self.selectedColumn > 0:
-                self.selectedColumn -= 1
-
-    def print(self, printOptions):
-        output = "====================================================================\n" if printOptions else "=========================================\n"
+    def print(self, highlight = None):
+        output = "=========================================\n"
 
         for row in range(9):
             for column in range(9):
                 output += "||" if column % 3 == 0 else "|"
-                output += "=" if column == self.selectedColumn and row == self.selectedRow else " "
+                output += "=" if highlight != None and column == highlight['column'] and row == highlight['row'] else " "
                 output += f"{self.puzzle[column][row]['value']}" if self.puzzle[column][row]['value'] != None else " "
-                output += f"({len(self.puzzle[column][row]['options'])})" if printOptions else ""
-                output += "=" if column == self.selectedColumn and row == self.selectedRow else " "
+                output += ""
+                output += "=" if highlight != None and column == highlight['column'] and row == highlight['row'] else " "
 
             output += "||\n"
 
             if row % 3 == 2:
-                output += "====================================================================\n" if printOptions else "=========================================\n"
+                output += "=========================================\n"
             else:
-                output += "--------------------------------------------------------------------\n" if printOptions else "-----------------------------------------\n"
+                output += "-----------------------------------------\n"
 
         print(output)

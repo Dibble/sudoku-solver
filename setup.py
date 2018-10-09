@@ -2,28 +2,49 @@ import readchar
 from os import system
 
 
-def runSetup(puzzle):
-    while True:
-        system('clear')
+class Setup():
+    def __init__(self, puzzle):
+        self.selectedColumn = 0
+        self.selectedRow = 0
+        self.puzzle = puzzle
 
-        puzzle.print(False)
-        print("Enter the known values for the puzzle. Use arrow keys to move, type number 0-9 to set. Press Q when finished.")
+    def runSetup(self):
+        while True:
+            system('clear')
 
-        key = readchar.readkey()
+            self.puzzle.print({'column': self.selectedColumn,
+                               'row': self.selectedRow})
+            print("Enter the known values for the puzzle. Use arrow keys to move, type number 0-9 to set. Press Q when finished.")
 
-        if key == "q" or key == "Q":
-            return
-        elif key == readchar.key.UP:
-            puzzle.move("UP")
-        elif key == readchar.key.DOWN:
-            puzzle.move("DOWN")
-        elif key == readchar.key.RIGHT:
-            puzzle.move("RIGHT")
-        elif key == readchar.key.LEFT:
-            puzzle.move("LEFT")
-        else:
-            try:
-                value = int(key)
-                puzzle.setValue(value)
-            except ValueError:
-                print("I didn't understand that, try again")
+            key = readchar.readkey()
+
+            if key == "q" or key == "Q":
+                return
+            elif key == readchar.key.UP:
+                self.move("UP")
+            elif key == readchar.key.DOWN:
+                self.move("DOWN")
+            elif key == readchar.key.RIGHT:
+                self.move("RIGHT")
+            elif key == readchar.key.LEFT:
+                self.move("LEFT")
+            else:
+                try:
+                    value = int(key)
+                    self.puzzle.setValue(value)
+                except ValueError:
+                    print("I didn't understand that, try again")
+
+    def move(self, direction):
+        if direction == "UP":
+            if self.selectedRow > 0:
+                self.selectedRow -= 1
+        elif direction == "RIGHT":
+            if self.selectedColumn < 8:
+                self.selectedColumn += 1
+        elif direction == "DOWN":
+            if self.selectedRow < 8:
+                self.selectedRow += 1
+        elif direction == "LEFT":
+            if self.selectedColumn > 0:
+                self.selectedColumn -= 1

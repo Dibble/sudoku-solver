@@ -1,16 +1,17 @@
 from sudoku import Sudoku
-import setup
+from setup import Setup
 from solver import Solver
 
 
 def start():
     puzzle = Sudoku()
-    setup.runSetup(puzzle)
+    setup = Setup(puzzle)
+    setup.runSetup()
 
     print("Setup done, solving...")
     puzzleSolver = Solver(puzzle.puzzle)
     solved, iterations = puzzleSolver.solve()
-    puzzle.print(False)
+    puzzle.print()
     print("Solved:", solved, iterations, "iterations")
 
 
