@@ -31,7 +31,8 @@ class Setup():
             else:
                 try:
                     value = int(key)
-                    self.puzzle.setValue(value)
+                    self.puzzle.setValue(
+                        self.selectedColumn, self.selectedRow, value)
                 except ValueError:
                     print("I didn't understand that, try again")
 

@@ -47,7 +47,19 @@ class Sudoku:
 
         self.puzzle[column][row]['value'] = value
         return value
-
+    
+    def hasValue(self, column, row):
+        return self.puzzle[column][row]['value'] != None
+    
+    def getValue(self, column, row):
+        return self.puzzle[column][row]['value']
+    
+    def getOptions(self, column, row):
+        return self.puzzle[column][row]['options']
+    
+    def numberOfOptions(self, column, row):
+        return len(self.puzzle[column][row]['options'])
+    
     def print(self, highlight = None):
         output = "=========================================\n"
 

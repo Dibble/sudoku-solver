@@ -9,7 +9,7 @@ def start():
     setup.runSetup()
 
     print("Setup done, solving...")
-    puzzleSolver = Solver(puzzle.puzzle)
+    puzzleSolver = Solver(puzzle)
     solved, iterations = puzzleSolver.solve()
     puzzle.print()
     print("Solved:", solved, iterations, "iterations")
